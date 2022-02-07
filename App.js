@@ -58,7 +58,7 @@ export default function App() {
   function errorAlert() {
     Alert.alert(
       "Error",
-      "You need to type in weight!",
+      "You need to type in weight and use integers!",
     [
       {
         text: "Got it!",
@@ -71,8 +71,10 @@ export default function App() {
   function calculate() {
     let endResult = 0;
     
-    //Check if weight has input. Check for default value 0 and "nothing" value ('') in case the user deleted text
-    if (weight !== "" && weight !== 0) {
+
+    //Check if weight has input. Check for default value 0 and "nothing" value ('') in case the user deleted text.
+    //Also check if the weight input is a number. If not, return an error
+    if (weight !== "" && weight !== "0" && !isNaN(weight)) {
       let litres = bottleSelect * 0.33;
       let grams = litres * 8 * 4.5;
       let burning = weight / 10;
@@ -100,7 +102,7 @@ export default function App() {
       //Set result for rendering
       setResult(endResult.toFixed(2));
     } else {
-      errorAlert();
+      errorAlert("No input");
     }
   }
 
