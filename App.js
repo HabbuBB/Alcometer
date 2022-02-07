@@ -9,7 +9,7 @@ export default function App() {
   const [bottleSelect, setBottleSelect] = useState(1);
   const [timeSelect, setTimeSelect] = useState(1);
   const [genderSelect, setGenderSelect] = useState("male");
-  const [weight, setWeight] = useState(0);
+  const [weight, setWeight] = useState('0');
   const [result, setResult] = useState('');
   const [fontColor, setFontColor] = useState("#000000");
 
