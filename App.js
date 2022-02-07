@@ -73,7 +73,7 @@ export default function App() {
     
 
     //Check if weight has input. Check for default value 0 and "nothing" value ('') in case the user deleted text.
-    //Also check if the weight input is a number. If not, return an error
+    //Also check if the weight input is a number. If not, return an error.
     if (weight !== "" && weight !== "0" && !isNaN(weight)) {
       let litres = bottleSelect * 0.33;
       let grams = litres * 8 * 4.5;
@@ -114,7 +114,7 @@ export default function App() {
         <View style={styles.inputWrapper}>
           <Text style={styles.inputHeading}>Weight</Text>
           <TextInput
-            keyboardType="number-pad"
+            keyboardType="phone-pad"
             placeholder="in kilograms"
             style={styles.textInput}
             onChangeText={(text) => setWeight(text)}
