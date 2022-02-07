@@ -102,7 +102,7 @@ export default function App() {
       //Set result for rendering
       setResult(endResult.toFixed(2));
     } else {
-      errorAlert("No input");
+      errorAlert();
     }
   }
 
